@@ -9,17 +9,17 @@ Zadania wykonane na zajęciach Podyplomowych Studiów Podstaw Informatyki.
 
 2. Wprowadzenie do HTML i CSS
 
-  - [ ] Nie wykonane.
+  - [ ] Niewykonane.
 
 3. HTML5
 
-  - [ ] Nie wykonane.
+  - [ ] Niewykonane.
 
 4. CSS3
 
-  - [ ] Nie wykonane.
+  - [ ] Niewykonane.
 
 5. JavaScript
 
-  - [ ] Nie wykonane.
+  - [ ] Niewykonane.
 
