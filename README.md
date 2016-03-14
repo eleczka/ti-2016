@@ -27,3 +27,4 @@ Zadania wykonane na zajeciach Podyplomowych Studiow Podstaw Informatyki.
   - [ ] Niewykonane.
 
 
+[Egzamin](http://images4.bibsy.pl/pLGY75ZV/prawdziwy-informatyk-kladzie-sie-spac-o-128-czasem-o-256-w-skrajnym-przypadku-o-512-a-wstaje-o-1024-w-skrajnym-przypadku-o-2048.jpeg)
