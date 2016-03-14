@@ -2,25 +2,24 @@
 
 ### TO DO
 Zadania wykonane na zajęciach Podyplomowych Studiów Podstaw Informatyki.
-/play nyan
 
 1. Zalozenie konta na GitHUB, stworzenie repozytorium do kierunku studiów
 
-  -[X] Wykonane. /play yeah
+  - [X] Wykonane.
 
 2. Wprowadzenie do HTML i CSS
 
-  -[ ] Nie wykonane. /play ohmy
+  - [ ] Nie wykonane.
 
 3. HTML5
 
-  -[ ] Nie wykonane. /play ohmy
+  - [ ] Nie wykonane.
 
 4. CSS3
 
-  -[ ] Nie wykonane. /play ohmy
+  - [ ] Nie wykonane.
 
 5. JavaScript
 
-  -[ ] Nie wykonane. /play ohmy
+  - [ ] Nie wykonane.
 
