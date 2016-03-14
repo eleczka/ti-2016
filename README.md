@@ -8,6 +8,7 @@ Zadania wykonane na zajeciach Podyplomowych Studiow Podstaw Informatyki.
   Linki ulatwiajace edycje README:
   * [GitHub Basic writing and formatting syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
   * [Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com/)
+  * [Masterng Markdown](https://guides.github.com/features/mastering-markdown/)
   - [X] Wykonane.
 
 2. Wprowadzenie do HTML i CSS.
@@ -27,4 +28,4 @@ Zadania wykonane na zajeciach Podyplomowych Studiow Podstaw Informatyki.
   - [ ] Niewykonane.
 
 
-[Egzamin](http://images4.bibsy.pl/pLGY75ZV/prawdziwy-informatyk-kladzie-sie-spac-o-128-czasem-o-256-w-skrajnym-przypadku-o-512-a-wstaje-o-1024-w-skrajnym-przypadku-o-2048.jpeg)
+![Egzamin](http://images4.bibsy.pl/pLGY75ZV/prawdziwy-informatyk-kladzie-sie-spac-o-128-czasem-o-256-w-skrajnym-przypadku-o-512-a-wstaje-o-1024-w-skrajnym-przypadku-o-2048.jpeg)
