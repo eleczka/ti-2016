@@ -1,11 +1,11 @@
 ## Technologie Internetowe PSPI 2015/16
 
 ### TO DO
-Zadania wykonane na zajęciach Podyplomowych Studiów Podstaw Informatyki.
+Zadania wykonane na zajeciach Podyplomowych Studiow Podstaw Informatyki.
 
 1. Zalozenie konta na GitHUB, stworzenie repozytorium na projekt z tego przedmiotu.
 
-  Links for fast README edit:
+  Linki ulatwiajace edycje README:
   * [GitHub Basic writing and formatting syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
   * [Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com/)
   - [X] Wykonane.
