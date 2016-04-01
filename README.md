@@ -1,6 +1,20 @@
 ## Krótkie przygotowanie srodowiska pracy do edycji i uruchomienia projektu napisanego w Java Spring
 
-Notatka ta powstala podczas wspoltworzenia projektu wykonywanego w ramach Koduj dla Polski, projekt *Inteligentny system w zarzadzaniu mieniem komunalnym na przykladzie Gdanska*.
+Notatka ta powstala podczas wspoltworzenia projektu wykonywanego w ramach [Koduj dla Polski](http://kodujdlapolski.pl/), projekt *Inteligentny system w zarzadzaniu mieniem komunalnym na przykladzie Gdanska*.
+
+**Czym jest Koduj dla Polski?**
+
+> Wiemy że technologia oferuje ona nowe możliwości działania, jednak nie jest panaceum na wszystkie problemy. Dlatego stworzyliśmy przestrzeń do dyskusji i współpracy, aby pozwolić nam wszystkim wypracować optymalne rozwiązania. Budując na zrozumieniu interakcji międzyludzkich i procesów społecznych staramy się wdrażać rozwiązania technologiczne tam, gdzie będą one miały największy pozytywny wpływ.
+> 
+> Wspólnie dyskutujemy, motywujemy się do działania, budujemy bazę wiedzy i wdrażamy aplikacje i serwisy internetowe.
+
+ * [Trojmiejska strona Koduj dla Polski](http://kodujdlapolski.pl/cities/trojmiasto/)
+ * [Trójmiejska grupa na Facebook](https://web.facebook.com/groups/kodujdlapolski.trojmiasto)
+ * [Trójmiejska grupa na Meetup](http://www.meetup.com/Koduj-dla-Polski-Trojmiasto/)
+
+Nic, tylko zapisac sie i dzialac z nami! :yum:
+
+### Wprowadzenie
 
 Do wykonania zadania potrzeba nam:
  1. Gotowy projekt wykonany w Spring (oczywiscie pobrany przez jakis Git :smiling_imp: )
@@ -52,11 +66,12 @@ Moze zdarzyc sie, ze w pobranym projekcie brakuje niektorych plikow i Eclipse zg
 Pliki te mozna latwo znalezc wpisujac ich nazwy w Google, zwykle beda pod pierwszym linkiem na stronie [MVN Repository](http://mvnrepository.com/).
 
 **Wazna uwaga**
+
 Mozna przygotowac projekt do pracy jeszcze z poziomu Mavena (w koncu do tego sluzy) tak, zeby dalo sie pracowac w Eclipse. W tym celu w wierszu polecen przechodzimy do katalogu naszego projektu i wpisujemy komende:
 ```
 mvn eclipse:eclipse
 ```
-Oczywiscie trzeba miec dostep do internetu, by Maven pobral wszelkie potrzebne pliki. Trzeba jednak z tym bardzo uwazac, poniewaz w moim przypadku zbudowanie projektu w ten sposob co prawda przyczynilo sie do umozliwienia dzialania calego projektu, ale nie dzialalo polaczenie z MySQL. Zatem mozna najpierw skorzystac z powyzszej metody, a jesli nie zadziala baza danych, przygotowac caly Workspace od nowa i pobrac niezbedne pliki.
+Oczywiscie trzeba miec dostep do internetu, by Maven pobral wszelkie potrzebne pliki. Trzeba jednak z tym bardzo uwazac, poniewaz w moim przypadku zbudowanie projektu w ten sposob co prawda przyczynilo sie do umozliwienia dzialania calego projektu, ale nie dzialalo polaczenie z MySQL. Zatem mozna najpierw skorzystac z powyzszej metody, a jesli nie zadziala baza danych, przygotowac caly Workspace od nowa i pobrac niezbedne pliki recznie, jak zostalo to pokazane wyzej.
 
 ### MySQL Workbench i MySQL Server
 
@@ -84,15 +99,41 @@ C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld
 ```
 I to wlasciwie wszystko, jesli chodzi o podstawowa konfiguracje. Nastepnie serwer mozna uruchomic i jesli jeszcze nie mamy bazy danych, to utworzyc ja, a jesli juz jest gotowa, to z menu *Server* wykonac `Import`.
 
-#### Dalsze przygotowania Eclipse
+### Dalsze przygotowania Eclipse
 
 Jesli nasz projekt w Eclipse nie posiada pliku sluzacego do komunikacji z baza danych MySQL, musimy go wprowadzic.
 Najpierw wchodzimy na strone [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/), gdzie pobieramy archiwum i wypakowujemy do katalogu *naszWorkspace/nazwaProjektu/lib*. Nastepnie w dolnym oknie roboczym Eclipse wybieramy zakladke `Data Source Explorer`, klikamy prawym przyciskiem i wybieramy *New...*. Wybieramy *MySQL*, a potem w prawym gornym rogu klikamy *New Driver Definition*, gdzie podajemy sciezke do pliku `.jar` w katalogu `lib`. W kolejnym kroku podajemy dane do serwera:
 ![Eclipse - serwer](https://github.com/ElektroITmatyk/TI-2016/blob/master/eclipse-mysql.png)
 W polu *Database:* podajemy nazwe bazy danych, ktora stworzylismy w MySQL Workbench. W polu *URL* podajemy sciezke lokalnego serwera, ktory musi wygladac tak: `jdbc:mysql://localhost:3306/`, czyli nie podajemy tu nazwy bazy danych, co sugeruje Eclipse. Oczywiscie podajemy tez login i haslo do serwera.
 
-(uruchamianie aplikacji cdn)
+W naszym projekcie musi znajdowac sie plik, w ktorym bedzie sciezka do bazy danych oraz dane do logowania. W przypadku framework Spring w podkatalogu `src/main/resources/` powinien znajdowac sie plik `application.properties`, w ktorym musi znalezc sie ponizszy kod:
+```
+spring.datasource.url = jdbc:mysql://localhost:3306/nazwa_bazy_danych
+spring.datasource.username = root      // lub inny login
+spring.datasource.password = haslo_serwera
+spring.jpa.hibernate.naming_strategy = org.hibernate.cfg.EJB3NamingStrategy   //jesli uzywamy H2 do uruchomienia poprzez Tomcat
+```
 
-#### Nareszcie koniec!
+### Uruchomienie aplikacji
+
+Aplikacje mozemy uruchomic na dwa sposoby.
+ 1. Komenda w wierszu polecen,
+ 2. W Eclipse.
+
+**1. Wiersz polecen**
+
+Przechodzimy do katalogu, w ktorym mamy projekt i wpisujemy ponizsza komende:
+```
+mvn spring-boot:run
+```
+
+**2. Eclipse**
+
+W menu *Run* wchodzimy do *Run Configurations...* i wpisujemy jak ponizej:
+![Run](https://github.com/ElektroITmatyk/TI-2016/blob/master/eclipse-run.png)
+
+Jesli wczesniej mielismy wszystko dobrze skonfigurowane, to apilkacja powinna prawidlowo uruchomic sie i mozemy otworzyc strone w przegladarce pod adresem `localhost:8080`
+
+### Nareszcie koniec!
 
 I to w zasadzie wszystko! Tak skonfigurowane srodowiska powinny zapewnic nam przynajmniej na poczatku bezproblemowa prace.  :relaxed:
