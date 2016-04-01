@@ -51,7 +51,16 @@ Moze zdarzyc sie, ze w pobranym projekcie brakuje niektorych plikow i Eclipse zg
 
 Pliki te mozna latwo znalezc wpisujac ich nazwy w Google, zwykle beda pod pierwszym linkiem na stronie [MVN Repository](http://mvnrepository.com/).
 
+**Wazna uwaga**
+Mozna przygotowac projekt do pracy jeszcze z poziomu Mavena (w koncu do tego sluzy) tak, zeby dalo sie pracowac w Eclipse. W tym celu w wierszu polecen przechodzimy do katalogu naszego projektu i wpisujemy komende:
+```
+mvn eclipse:eclipse
+```
+Oczywiscie trzeba miec dostep do internetu, by Maven pobral wszelkie potrzebne pliki. Trzeba jednak z tym bardzo uwazac, poniewaz w moim przypadku zbudowanie projektu w ten sposob co prawda przyczynilo sie do umozliwienia dzialania calego projektu, ale nie dzialalo polaczenie z MySQL. Zatem mozna najpierw skorzystac z powyzszej metody, a jesli nie zadziala baza danych, przygotowac caly Workspace od nowa i pobrac niezbedne pliki.
+
 ### MySQL Workbench i MySQL Server
 
 W MySQL Installer - Community wybieramy do instalacji zarówno Workbench jak i Server.
 MySQL Server jest programem tworzacym lokalny serwer dla bazy danych, ktora bedziemy zarzadzali w MySQL Workbench.
+
+Podczas instalacji MySQL Server bedziemy wybierali domyslny port dla adresu localhost (127.0.0.1). Instalator proponuje port *3306* i tak najlepiej to zostawic. Dodatkowo wybieramy login uzytkownika (najlepiej zostawic *root*) oraz (cdn)
