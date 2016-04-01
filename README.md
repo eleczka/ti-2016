@@ -1,4 +1,4 @@
-## Krótkie przygotowanie srodowiska pracy do edycji i uruchomienia projektu napisanego w Java Spring
+## Krotkie przygotowanie srodowiska pracy do edycji i uruchomienia projektu napisanego w Java Spring
 
 Notatka ta powstala podczas wspoltworzenia projektu wykonywanego w ramach [Koduj dla Polski](http://kodujdlapolski.pl/), projekt *Inteligentny system w zarzadzaniu mieniem komunalnym na przykladzie Gdanska*.
 
@@ -22,7 +22,7 @@ Do wykonania zadania potrzeba nam:
  3. Eclipse JavaEE
  4. MySQL Workbench
 
-Oczywicie nie jest wymagane stosowanie Eclipse oraz MySQL Workbench. Można zastosować inne srodowiska, jednak ta notatka bedzie opierala sie wlasnie na tych programach. :innocent:
+Oczywiscie nie jest wymagane stosowanie Eclipse oraz MySQL Workbench. Mozna zastosowac inne srodowiska, jednak ta notatka bedzie opierala sie wlasnie na tych programach. :innocent:
 
 Programy do sciagniecia:
 
@@ -137,3 +137,5 @@ Jesli wczesniej mielismy wszystko dobrze skonfigurowane, to apilkacja powinna pr
 ### Nareszcie koniec!
 
 I to w zasadzie wszystko! Tak skonfigurowane srodowiska powinny zapewnic nam przynajmniej na poczatku bezproblemowa prace.  :relaxed:
+Jesli w tekscie znajduja sie bledy lub nieaktualne dane, prosze smialo zglaszajcie w https://github.com/ElektroITmatyk/TI-2016/issues
+Dziekuje za przeczytanie i zycze przyjemnego programowania. :blush:
