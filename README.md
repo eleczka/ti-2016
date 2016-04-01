@@ -137,5 +137,6 @@ Jesli wczesniej mielismy wszystko dobrze skonfigurowane, to apilkacja powinna pr
 ### Nareszcie koniec!
 
 I to w zasadzie wszystko! Tak skonfigurowane srodowiska powinny zapewnic nam przynajmniej na poczatku bezproblemowa prace.  :relaxed:
-Jesli w tekscie znajduja sie bledy lub nieaktualne dane, prosze smialo zglaszajcie w https://github.com/ElektroITmatyk/TI-2016/issues
+Jesli w tekscie znajduja sie bledy lub nieaktualne dane, prosze smialo zglaszajcie w [Issues](https://github.com/ElektroITmatyk/TI-2016/issues).
+
 Dziekuje za przeczytanie i zycze przyjemnego programowania. :blush:
