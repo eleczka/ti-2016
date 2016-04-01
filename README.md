@@ -1,31 +1,34 @@
-## Technologie Internetowe PSPI 2015/16
+## Krótkie przygotowanie srodowiska pracy do edycji i uruchomienia projektu Java Spring
 
-### TO DO
-Zadania wykonane na zajeciach Podyplomowych Studiow Podstaw Informatyki.
+Do wykonania zadania potrzeba nam:
+1. Gotowy projekt wykonany w Spring
+2. Apache Maven
+3. Eclipse JavaEE
+4. MySQL Workbench
 
-1. Zalozenie konta na GitHUB, stworzenie repozytorium na projekt z tego przedmiotu.
+Oczywicie nie jest wymagane stosowanie Eclipse oraz MySQL Workbench. Można zastosować inne srodowiska, jednak ta notatka bedzie opierala sie wlasnie na tych programach. :innocent:
 
-  Linki ulatwiajace edycje README:
-  * [GitHub Basic writing and formatting syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
-  * [Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com/)
-  * [Masterng Markdown](https://guides.github.com/features/mastering-markdown/)
-  - [X] Wykonane.
+Programy do sciagniecia:
 
-2. Wprowadzenie do HTML i CSS.
+* [Apache Maven](https://maven.apache.org/)
+* [Eclipse JavaEE](https://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/mars2)
+* [MySQL Workbench](https://dev.mysql.com/downloads/installer/) W tym wypadku najlepiej skorzystać z instalatora, ponieważ       bedzie instalowanych kilka programow.
 
-  - [ ] Niewykonane.
+Dodatkowo nalezy miec zainstalowana [Java SE SDK](http://www.oracle.com/technetwork/java/javase/overview/index.html).
 
-3. HTML5.
+Pliki Maven zapisujemy w wybranym przez siebie katalogu. Aby wszystko dzialalo prawidlowo, nalezy dodac zmienne srodowiskowe:
 
-  - [ ] Niewykonane.
-
-4. CSS3.
-
-  - [ ] Niewykonane.
-
-5. JavaScript.
-
-  - [ ] Niewykonane.
-
-
-![Egzamin](http://images4.bibsy.pl/pLGY75ZV/prawdziwy-informatyk-kladzie-sie-spac-o-128-czasem-o-256-w-skrajnym-przypadku-o-512-a-wstaje-o-1024-w-skrajnym-przypadku-o-2048.jpeg)
+W zmiennej path dodajemy w wierszu polecen lub w Windowsie: System :arrow_right: Zmienne srodowiskowe :arrow_right: path
+Na przyklad: 
+```
+C:\Programy\apache-maven-3.3.9\bin
+```
+Oprocz tego musimy stworzyc nowa zmienna systemowa o nazwie JAVA_HOME. W niej umieszczamy sciezke do zainstalowanego SDK Javy, np.:
+```
+C:\Program Files\Java\jdk1.8.0_66
+```
+Aby upewnic sie, ze wszystko wykonalismy dobrze, w wierszu polecen mozna sprawdzic dzialanie Mavena wpisujac komende:
+```
+mvn -v
+```
+Jesli wszystko wykonalo sie poprawnie, mozna przejsc do kolejnej instalacji.
