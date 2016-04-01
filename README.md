@@ -39,4 +39,19 @@ mvn -v
 Jesli wszystko wykonalo sie poprawnie i widzimy efekt podobny do ponizszego, mozna przejsc do kolejnej instalacji.
 ![mvn-v](https://github.com/ElektroITmatyk/TI-2016/blob/master/maven.png)
 
+### Eclipse JavaEE
 
+Po uruchomieniu srodowiska Eclipse wybieramy katalog, w ktorym bedzie nasza *przestrzen robocza* czyli Workspace. Nastepnie w oknie Project Explorer klikamy prawym przyciskiem Import:
+![Import](https://github.com/ElektroITmatyk/TI-2016/blob/master/eclipse-import.png)
+
+Jako zrodlo wybieramy `Maven` i `Existing Maven Projects` po czym wciskamy *Next*. Podajemy sciezke dostepu, w ktorej znajduje sie sciagniety przez Git projekt. Jesli wszystko jest prawidlowo, powinien zostac wyswietlony checkbox z plikiem `pom.xml`.
+
+Moze zdarzyc sie, ze w pobranym projekcie brakuje niektorych plikow i Eclipse zglosi nam bledy ikona z czerwonym wykrzyknikiem. W tej sytuacji nalezy w dolnym oknie roboczym wybrac zakladke *Markers*, gdzie otrzymamy informacje o brakujacych plikach i katalogach, w ktorych takie pliki powinny sie znajdowac.
+![Markers](https://github.com/ElektroITmatyk/TI-2016/blob/master/eclipse-markers.png)
+
+Pliki te mozna latwo znalezc wpisujac ich nazwy w Google, zwykle beda pod pierwszym linkiem na stronie [MVN Repository](http://mvnrepository.com/).
+
+### MySQL Workbench i MySQL Server
+
+W MySQL Installer - Community wybieramy do instalacji zarówno Workbench jak i Server.
+MySQL Server jest programem tworzacym lokalny serwer dla bazy danych, ktora bedziemy zarzadzali w MySQL Workbench.
