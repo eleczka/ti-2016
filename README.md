@@ -84,8 +84,10 @@ W moim przypadku po zainstalowaniu w katalogu Program Files (wersja 64-bitowa) z
 
 Instalacja MySQL Workbench nie jest zbyt skomplikowana, ale juz konfiguracja wymaga wiecej pracy. Po uruchomieniu programu klikmay na znaczek :heavy_plus_sign: aby dodac nowe polaczenie:
 ![Nowy serwer](https://github.com/ElektroITmatyk/TI-2016/blob/master/mysql-new1.png)
+
 Podajemy wybrana nazwe oraz wpisujemy login i haslo, ktore wybralismy podczas instalacji MySQL Server. Nastepnie klikamy *Configure Server Management...* (mozna tez zatwierdzic obecne ustawienia, a nastepnie kliknac prawym przyciskiem na ikonie utworzonego serwera i wybrac *Edit*).
 ![plik konfiguracyjny](https://github.com/ElektroITmatyk/TI-2016/blob/master/mysql-new2.png)
+
 Domyslnie wybierana jest sciezka do wspolnego pliku konfiguracyjnego *my.ini*, jednak mozna tez stworzyc taki plik o innej nazwie dla roznych serwerow. W tym celu tworzymy kopie pliku *my.ini* i zmieniamy nazwe na wlasciwa, poniewaz wskazujac sciezke podczas konfiguracji plik taki musi juz istniec.
 
 Kolejnym krokiem bedzie konfiguracja serwera. Przechodzimy wiec przez kolejne etapy az do ponizszego kroku, w ktorym wybieramy *I'd like to review the settings again*.
@@ -93,6 +95,7 @@ Kolejnym krokiem bedzie konfiguracja serwera. Przechodzimy wiec przez kolejne et
 
 Zaznaczamy *Change Parameters* i przechodzimy dalej, do najwazniejszego okna, w ktorym podajemy sciezke do pliku serwera `mysqld.exe`.
 ![mysqld](https://github.com/ElektroITmatyk/TI-2016/blob/master/mysql-new4.png)
+
 Musimy tutaj wskazac dokladna sciezke dostepu do tego pliku. Zwykle bedzie on w podkatalogu `bin` instalacji MySQL Server, np.:
 ```
 C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld
@@ -104,6 +107,7 @@ I to wlasciwie wszystko, jesli chodzi o podstawowa konfiguracje. Nastepnie serwe
 Jesli nasz projekt w Eclipse nie posiada pliku sluzacego do komunikacji z baza danych MySQL, musimy go wprowadzic.
 Najpierw wchodzimy na strone [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/), gdzie pobieramy archiwum i wypakowujemy do katalogu *naszWorkspace/nazwaProjektu/lib*. Nastepnie w dolnym oknie roboczym Eclipse wybieramy zakladke `Data Source Explorer`, klikamy prawym przyciskiem i wybieramy *New...*. Wybieramy *MySQL*, a potem w prawym gornym rogu klikamy *New Driver Definition*, gdzie podajemy sciezke do pliku `.jar` w katalogu `lib`. W kolejnym kroku podajemy dane do serwera:
 ![Eclipse - serwer](https://github.com/ElektroITmatyk/TI-2016/blob/master/eclipse-mysql.png)
+
 W polu *Database:* podajemy nazwe bazy danych, ktora stworzylismy w MySQL Workbench. W polu *URL* podajemy sciezke lokalnego serwera, ktory musi wygladac tak: `jdbc:mysql://localhost:3306/`, czyli nie podajemy tu nazwy bazy danych, co sugeruje Eclipse. Oczywiscie podajemy tez login i haslo do serwera.
 
 W naszym projekcie musi znajdowac sie plik, w ktorym bedzie sciezka do bazy danych oraz dane do logowania. W przypadku framework Spring w podkatalogu `src/main/resources/` powinien znajdowac sie plik `application.properties`, w ktorym musi znalezc sie ponizszy kod:
