@@ -51,17 +51,17 @@ Aby upewnic sie, ze wszystko wykonalismy dobrze, w wierszu polecen mozna sprawdz
 mvn -v
 ```
 Jesli wszystko wykonalo sie poprawnie i widzimy efekt podobny do ponizszego, mozna przejsc do kolejnej instalacji.
-![mvn-v](https://github.com/ElektroITmatyk/TI-2016/blob/master/maven.png)
+![mvn-v](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/maven.png)
 
 ### Eclipse JavaEE
 
 Po uruchomieniu srodowiska Eclipse wybieramy katalog, w ktorym bedzie nasza *przestrzen robocza* czyli Workspace. Nastepnie w oknie Project Explorer klikamy prawym przyciskiem Import:
-![Import](https://github.com/ElektroITmatyk/TI-2016/blob/master/eclipse-import.png)
+![Import](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/eclipse-import.png)
 
 Jako zrodlo wybieramy `Maven` i `Existing Maven Projects` po czym wciskamy *Next*. Podajemy sciezke dostepu, w ktorej znajduje sie sciagniety przez Git projekt. Jesli wszystko jest prawidlowo, powinien zostac wyswietlony checkbox z plikiem `pom.xml`.
 
 Moze zdarzyc sie, ze w pobranym projekcie brakuje niektorych plikow i Eclipse zglosi nam bledy ikona z czerwonym wykrzyknikiem. W tej sytuacji nalezy w dolnym oknie roboczym wybrac zakladke *Markers*, gdzie otrzymamy informacje o brakujacych plikach i katalogach, w ktorych takie pliki powinny sie znajdowac.
-![Markers](https://github.com/ElektroITmatyk/TI-2016/blob/master/eclipse-markers.png)
+![Markers](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/eclipse-markers.png)
 
 Pliki te mozna latwo znalezc wpisujac ich nazwy w Google, zwykle beda pod pierwszym linkiem na stronie [MVN Repository](http://mvnrepository.com/).
 
@@ -83,18 +83,18 @@ Podczas instalacji MySQL Server bedziemy wybierali domyslny port dla adresu loca
 W moim przypadku po zainstalowaniu w katalogu Program Files (wersja 64-bitowa) zabraklo katalogu *data*, w ktorym umieszczane sa logi o bledach. Jesli utworzymy sami taki katalog, nie bedzie dalszych problemow.
 
 Instalacja MySQL Workbench nie jest zbyt skomplikowana, ale juz konfiguracja wymaga wiecej pracy. Po uruchomieniu programu klikmay na znaczek :heavy_plus_sign: aby dodac nowe polaczenie:
-![Nowy serwer](https://github.com/ElektroITmatyk/TI-2016/blob/master/mysql-new1.png)
+![Nowy serwer](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/mysql-new1.png)
 
 Podajemy wybrana nazwe oraz wpisujemy login i haslo, ktore wybralismy podczas instalacji MySQL Server. Nastepnie klikamy *Configure Server Management...* (mozna tez zatwierdzic obecne ustawienia, a nastepnie kliknac prawym przyciskiem na ikonie utworzonego serwera i wybrac *Edit*).
-![plik konfiguracyjny](https://github.com/ElektroITmatyk/TI-2016/blob/master/mysql-new2.png)
+![plik konfiguracyjny](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/mysql-new2.png)
 
 Domyslnie wybierana jest sciezka do wspolnego pliku konfiguracyjnego *my.ini*, jednak mozna tez stworzyc taki plik o innej nazwie dla roznych serwerow. W tym celu tworzymy kopie pliku *my.ini* i zmieniamy nazwe na wlasciwa, poniewaz wskazujac sciezke podczas konfiguracji plik taki musi juz istniec.
 
 Kolejnym krokiem bedzie konfiguracja serwera. Przechodzimy wiec przez kolejne etapy az do ponizszego kroku, w ktorym wybieramy *I'd like to review the settings again*.
-![Konfiguracja serwera](https://github.com/ElektroITmatyk/TI-2016/blob/master/mysql-new3.png)
+![Konfiguracja serwera](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/mysql-new3.png)
 
 Zaznaczamy *Change Parameters* i przechodzimy dalej, do najwazniejszego okna, w ktorym podajemy sciezke do pliku serwera `mysqld.exe`.
-![mysqld](https://github.com/ElektroITmatyk/TI-2016/blob/master/mysql-new4.png)
+![mysqld](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/mysql-new4.png)
 
 Musimy tutaj wskazac dokladna sciezke dostepu do tego pliku. Zwykle bedzie on w podkatalogu `bin` instalacji MySQL Server, np.:
 ```
@@ -106,7 +106,7 @@ I to wlasciwie wszystko, jesli chodzi o podstawowa konfiguracje. Nastepnie serwe
 
 Jesli nasz projekt w Eclipse nie posiada pliku sluzacego do komunikacji z baza danych MySQL, musimy go wprowadzic.
 Najpierw wchodzimy na strone [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/), gdzie pobieramy archiwum i wypakowujemy do katalogu *naszWorkspace/nazwaProjektu/lib*. Nastepnie w dolnym oknie roboczym Eclipse wybieramy zakladke `Data Source Explorer`, klikamy prawym przyciskiem i wybieramy *New...*. Wybieramy *MySQL*, a potem w prawym gornym rogu klikamy *New Driver Definition*, gdzie podajemy sciezke do pliku `.jar` w katalogu `lib`. W kolejnym kroku podajemy dane do serwera:
-![Eclipse - serwer](https://github.com/ElektroITmatyk/TI-2016/blob/master/eclipse-mysql.png)
+![Eclipse - serwer](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/eclipse-mysql.png)
 
 W polu *Database:* podajemy nazwe bazy danych, ktora stworzylismy w MySQL Workbench. W polu *URL* podajemy sciezke lokalnego serwera, ktory musi wygladac tak: `jdbc:mysql://localhost:3306/`, czyli nie podajemy tu nazwy bazy danych, co sugeruje Eclipse. Oczywiscie podajemy tez login i haslo do serwera.
 
@@ -134,7 +134,7 @@ mvn spring-boot:run
 **2. Eclipse**
 
 W menu *Run* wchodzimy do *Run Configurations...* i wpisujemy jak ponizej:
-![Run](https://github.com/ElektroITmatyk/TI-2016/blob/master/eclipse-run.png)
+![Run](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/eclipse-run.png)
 
 Jesli wczesniej mielismy wszystko dobrze skonfigurowane, to apilkacja powinna prawidlowo uruchomic sie i mozemy otworzyc strone w przegladarce pod adresem `localhost:8080`
 
