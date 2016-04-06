@@ -105,18 +105,27 @@ I to wlasciwie wszystko, jesli chodzi o podstawowa konfiguracje. Nastepnie serwe
 ### Dalsze przygotowania Eclipse
 
 Jesli nasz projekt w Eclipse nie posiada pliku sluzacego do komunikacji z baza danych MySQL, musimy go wprowadzic.
-Najpierw wchodzimy na strone [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/), gdzie pobieramy archiwum i wypakowujemy do katalogu *naszWorkspace/nazwaProjektu/lib*. Nastepnie w dolnym oknie roboczym Eclipse wybieramy zakladke `Data Source Explorer`, klikamy prawym przyciskiem i wybieramy *New...*. Wybieramy *MySQL*, a potem w prawym gornym rogu klikamy *New Driver Definition*, gdzie podajemy sciezke do pliku `.jar` w katalogu `lib`. W kolejnym kroku podajemy dane do serwera:
-![Eclipse - serwer](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/eclipse-mysql.png)
+Najpierw wchodzimy na strone [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/), gdzie pobieramy archiwum i wypakowujemy do katalogu *naszWorkspace/nazwaProjektu/lib*.
 
-W polu *Database:* podajemy nazwe bazy danych, ktora stworzylismy w MySQL Workbench. W polu *URL* podajemy sciezke lokalnego serwera, ktory musi wygladac tak: `jdbc:mysql://localhost:3306/`, czyli nie podajemy tu nazwy bazy danych, co sugeruje Eclipse. Oczywiscie podajemy tez login i haslo do serwera.
+Aby dodac nasz plik do projektu i wykorzystac podczas budowania i uruchamiania programu, trzeba dodac go do biblioteki. Klikamy zatem na jakims elemencie projektu w drzewie katalogow i wybieramy *Build Path* :arrow_right: *Configure Build Path...*, jak na obrazku ponizej.
+![build](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/eclipse-build.png)
 
-W naszym projekcie musi znajdowac sie plik, w ktorym bedzie sciezka do bazy danych oraz dane do logowania. W przypadku framework Spring w podkatalogu `src/main/resources/` powinien znajdowac sie plik `application.properties`, w ktorym musi znalezc sie ponizszy kod:
+Nastepnie w menu *Java Build Path* wybieramy zakladke *Libraries* i tam w klikamy `Add External JARs...`. Po wskazaniu potrzebnego nam pliku na dysku klikamy *Apply*. Dzieki takiemu umieszczeniu pliku program zawsze bedzie wiedzial, ze moze skorzystac z niego, jesli tylko zostanie w jakis sposob wywolany w kodzie programu.
+
+W naszym projekcie musi tez znajdowac sie plik, w ktorym bedzie sciezka do bazy danych oraz dane do logowania. W przypadku framework Spring w podkatalogu `src/main/resources/` powinien znajdowac sie plik `application.properties`, w ktorym musi znalezc sie ponizszy kod:
 ```
 spring.datasource.url = jdbc:mysql://localhost:3306/nazwa_bazy_danych
 spring.datasource.username = root      // lub inny login
 spring.datasource.password = haslo_serwera
-spring.jpa.hibernate.naming_strategy = org.hibernate.cfg.EJB3NamingStrategy   //jesli uzywamy H2 do uruchomienia poprzez Tomcat
+spring.jpa.hibernate.naming_strategy = org.hibernate.cfg.EJB3NamingStrategy   //jesli uzywamy Hibernate do uruchomienia poprzez Tomcat
 ```
+
+Jesli potrzebujemy komunikowac sie z baza danych z poziomu samego Eclipse np. zeby sprawdzic czy polaczenie dziala prawidlowo, wykonac ping itp., nalezy wykonac ponizsze czynnosci:
+
+W dolnym oknie roboczym Eclipse wybieramy zakladke `Data Source Explorer`, klikamy prawym przyciskiem i wybieramy *New...*. Wybieramy *MySQL*, a potem w prawym gornym rogu klikamy *New Driver Definition*, gdzie podajemy sciezke do pliku `.jar` w katalogu `lib`. W kolejnym kroku podajemy dane do serwera:
+![Eclipse - serwer](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/eclipse-mysql.png)
+
+W polu *Database:* podajemy nazwe bazy danych, ktora stworzylismy w MySQL Workbench. W polu *URL* podajemy sciezke lokalnego serwera, ktory musi wygladac tak: `jdbc:mysql://localhost:3306/`, czyli nie podajemy tu nazwy bazy danych, co sugeruje Eclipse. Oczywiscie podajemy tez login i haslo do serwera.
 
 ### Uruchomienie aplikacji
 
