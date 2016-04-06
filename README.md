@@ -108,6 +108,7 @@ Jesli nasz projekt w Eclipse nie posiada pliku sluzacego do komunikacji z baza d
 Najpierw wchodzimy na strone [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/), gdzie pobieramy archiwum i wypakowujemy do katalogu *naszWorkspace/nazwaProjektu/lib*.
 
 Aby dodac nasz plik do projektu i wykorzystac podczas budowania i uruchamiania programu, trzeba dodac go do biblioteki. Klikamy zatem na jakims elemencie projektu w drzewie katalogow i wybieramy *Build Path* :arrow_right: *Configure Build Path...*, jak na obrazku ponizej.
+
 ![build](https://github.com/ElektroITmatyk/TI-2016/blob/master/img/eclipse-build.png)
 
 Nastepnie w menu *Java Build Path* wybieramy zakladke *Libraries* i tam w klikamy `Add External JARs...`. Po wskazaniu potrzebnego nam pliku na dysku klikamy *Apply*. Dzieki takiemu umieszczeniu pliku program zawsze bedzie wiedzial, ze moze skorzystac z niego, jesli tylko zostanie w jakis sposob wywolany w kodzie programu.
