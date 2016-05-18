@@ -4,9 +4,14 @@
 
 
 body {
+  
   padding-bottom: 40px;
   background-color: #0F0F0F;
  }
+
+.versa-quotes {
+  text-align: right;
+}
 
 .header-up {
   height: 250px;
@@ -28,7 +33,6 @@ body {
 }
 
 .cont {
-  /*height: 100%;*/
   z-index: 10;
   position: relative;
   background-color: #151515;
@@ -60,6 +64,10 @@ body {
 }
 .navbar-wrapper .navbar .container {
   width: auto;
+}
+
+.navbar-logo {
+	height: 30px;
 }
 
 .header {
@@ -136,6 +144,15 @@ body {
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
+@media (max-width: 768px) {
+  .header-up h1 {
+	font-size: 26px;
+  }
+  
+  .navbar-logo {
+	height: 30px;
+  }
+}
 @media (min-width: 768px) {
   /* Navbar positioning foo */
   .navbar-wrapper {
@@ -161,7 +178,7 @@ body {
     font-size: 21px;
     line-height: 1.4;
   }
-
+  
   .featurette-heading {
     font-size: 50px;
   }
