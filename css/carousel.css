@@ -23,7 +23,9 @@ h1 {
 }
 
 .versa-quotes {
+  width: auto;
   text-align: right;
+  padding-right: 5%;
 }
 
 .cont {
@@ -158,6 +160,10 @@ h1 {
   .navbar-logo {
 	height: 30px;
   }
+  
+  .versa-quotes {
+  padding-left: 5%;
+}
 }
 @media (min-width: 768px) {
   /* Navbar positioning foo */
