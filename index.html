@@ -5,9 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="img/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="img/favicons/manifest.json">
+	<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="apple-mobile-web-app-title" content="Deus Ex fan page">
+	<meta name="application-name" content="Deus Ex fan page">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 
     <title>Deus Ex - strona fana</title>
 
@@ -22,10 +39,10 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<!-- Custom styles for this template -->
-    <link href="navbar-fixed-top.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
+	<script src="js/dropdown.js"></script>
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -41,25 +58,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"><img src="img/logo_dxu.png" alt="logo" class="img-responsive navbar-logo" /></a>
+              <a class="navbar-brand" href="index.html"><img src="img/logo_dxu.png" alt="logo" class="img-responsive navbar-logo" /></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Deus Ex</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
+                <li><a href="deus-ex.html">Deus Ex</a></li>
+                <li><a href="deus-ex-iw.html">Deus Ex<br>Invisible War</a></li>
+                <li><a href="deus-ex-hr.html">Deus Ex<br>Human Revolution</a></li>
+				<li><a href="author.html">O mnie</a></li>
               </ul>
             </div>
           </div>
@@ -88,67 +94,64 @@
 	<div class="container marketing cont"/>
 		
       <!-- START THE FEATURETTES -->
-	  
-	  
-      <hr class="featurette-divider">
 
-      <div class="row featurette">
+      <div class="row featurette cont-top-separate well">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Myśl, walcz, rozwijaj, przenikaj</h2>
+          <p class="lead">Seria Deus Ex zawiera elementy RPG, FPS oraz przygodowe. W każdej części prowadzimy postacią, której wszczepiono wszelkiej maści nowoczesne implanty, które czynią ją niezwykle niebezpieczną  tylko od nas zależy czy wykorzystamy to czyniąc dobro, czy też stając po stronie zła.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="img/deus-all.jpg" alt="Generic placeholder image">
+		  <p>Pobrano od <a href="http://atis1.deviantart.com/">Atis/DeviantArt</a></p>
         </div>
       </div>
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
+      <div class="row featurette well">
         <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Deus ex machina</h2>
+          <p class="lead">łac. bóg z maszyny, kalka językowa greckiego <em>apò mēkhanês theós</em> – pojęcie wprowadzone do dramatu antycznego przez Eurypidesa. Zsyłał on w swoich przedstawieniach boga, który gwałtownie rozwiązywał akcję, aby sztuka nie trwała zbyt długo. Maszyną nazywano specjalne urządzenie mechaniczne, dzięki któremu aktor grający boga spuszczany był na scenę z góry na linach. Potocznie stwierdzenie to oznacza wszystkie nagłe zmiany sytuacji, niedające się logicznie wyjaśnić w kategoriach rozwoju wydarzeń. W znaczeniu alegorycznym oznacza nieoczekiwane pojawienie się Boga. W znaczeniu naukowym oznacza wprowadzenie nieudowodnionej nowej koncepcji, która hipotetycznie tłumaczy pewien problem. (<a href="https://pl.wikipedia.org/wiki/Deus_ex_machina">Wikipedia</a>)</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="img/deus3-2.jpg" alt="Generic placeholder image">	  
         </div>
       </div>
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
+      <div class="row featurette well">
         <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Nie ufaj nikomu</h2>
+          <p class="lead">Mroczny świat. Mroczna przyszłość. Czy technologia jest naszym wybawieniem, czy może przekleństwem? Jaką cenę będą w stanie zapłacić ludzie, którzy zechcą wprowadzić w nasze życie swoją wizję świata?</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="img/deus3-dol.jpg" alt="Generic placeholder image">
         </div>
       </div>
 
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
-		
+	  <div>
+	    
+	  </div>
 
       <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      <footer class="row well-footer">
+        <p class="pull-right"><a href="#">Powrót na górę</a></p>
+        <p>&copy; 2016 &middot; by <a href="https://github.com/ElektroITmatyk">Liberator</a></p>
       </footer>
 
     </div><!-- /.container -->
 	
 	
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="assets/js/vendor/holder.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>

@@ -2,7 +2,6 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-
 body {
   background-color: #0F0F0F;
   color: #808080;
@@ -39,7 +38,6 @@ h1 {
 
 .cont-up {
   height: 250px;
-  /*background-color: #0F0F0F;*/
   width: 100%;
   padding-left: 20%;
   padding-right: 20%;
@@ -48,6 +46,10 @@ h1 {
 .cont-mid {
   height: 250px;
   background-color: transparent;
+}
+
+.cont-top-separate {
+  margin-top: 10%;
 }
 
 /* CUSTOMIZE THE NAVBAR
@@ -74,47 +76,32 @@ h1 {
 .navbar-wrapper .navbar .container {
   width: auto;
 }
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+ .navbar-one-line{}
+}
+
+.navbar-one-line {
+  padding-bottom: 36px;
+}
 
 .navbar-logo {
-	height: 30px;
+  height: 40px;
 }
 
 .header {
-	position: fixed;
-    background: #000 url("../img/deus3-gora.jpg") no-repeat  center center;
-    width: 100%;
-    height: 500px;
-    background-size: cover;
-    overflow: hidden;
-	z-index: -10;
-}
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
+  position: fixed;
+  background: #000 url("../img/deus3-gora.jpg") no-repeat  center center;
+  width: 100%;
   height: 500px;
-  margin-bottom: 60px;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
+  background-size: cover;
+  overflow: hidden;
+  z-index: -10;
 }
 
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 500px;
-  background-color: #777;
+.well-footer {
+  padding: 10px;
+  background-color: #0F0F0F;
 }
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
-}
-
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -139,6 +126,12 @@ h1 {
 
 .featurette-divider {
   margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #808080;
+  color: #808080;
+  background-color: #808080;
 }
 
 /* Thin out the marketing headings */
@@ -146,8 +139,14 @@ h1 {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
+  color: #B18840;
 }
 
+.featurette img {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -163,8 +162,9 @@ h1 {
   
   .versa-quotes {
   padding-left: 5%;
+  }
 }
-}
+
 @media (min-width: 768px) {
   /* Navbar positioning foo */
   .navbar-wrapper {
@@ -182,13 +182,6 @@ h1 {
   /* The navbar becomes detached from the top, so we round the corners */
   .navbar-wrapper .navbar {
     border-radius: 4px;
-  }
-
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
   }
   
   .featurette-heading {
