@@ -118,7 +118,7 @@ transition:all .4s linear;
 transform:scale(1.2);
 }
 .hovereffect:hover {
-outline: 1px solid #B18840;
+outline: 1px solid #808080;
 }
 
 /* MARKETING CONTENT
