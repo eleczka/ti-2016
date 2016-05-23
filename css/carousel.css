@@ -118,7 +118,7 @@ transition:all .4s linear;
 transform:scale(1.2);
 }
 .hovereffect:hover {
-outline: 1px solid #808080;
+outline: 2px solid #B18840;
 }
 
 /* MARKETING CONTENT
@@ -131,7 +131,7 @@ outline: 1px solid #808080;
   text-align: center;
 }
 .marketing h2 {
-  font-weight: normal;
+  font-weight: 22px;
 }
 .marketing .col-lg-4 p {
   margin-right: 10px;
@@ -147,9 +147,9 @@ outline: 1px solid #808080;
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #808080;
-  color: #808080;
-  background-color: #808080;
+  border-top: 1px solid #B18840;
+  color: #B18840;
+  background-color: #B18840;
 }
 
 /* Thin out the marketing headings */
@@ -201,7 +201,7 @@ outline: 1px solid #808080;
   }
   
   .featurette-heading {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
