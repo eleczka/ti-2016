@@ -167,7 +167,7 @@ outline: 2px solid #B18840;
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   h1 {
 	font-size: 26px;
   }
